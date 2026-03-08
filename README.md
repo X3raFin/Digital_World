@@ -10,7 +10,7 @@ A key feature is the ability for the user to save the current state of the world
 
 ### ⚡Digital Dashboard
 
-![Gif pokazujacy walke, miedzy gatunkami.]("src/Assets/Walka.gif")
+![Gif pokazujacy walke, miedzy gatunkami.](src/assets/Walka.gif)
 
 ---
 
