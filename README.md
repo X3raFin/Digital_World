@@ -4,7 +4,7 @@ The purpose of this project is to create a digital world, which is a small game 
 
 This project was created entirely in Java and served as my first introduction to both the language and the concepts of object-oriented programming.
 
-A key feature is the ability for the user to save the current state of the world—including all animal statistics and positions—to a text file, allowing them to resume their simulation at a later time.
+A key feature is the ability for the user to save the current state of the world-including all animal statistics and positions-to a text file, allowing them to resume their simulation at a later time.
 
 ---
 
