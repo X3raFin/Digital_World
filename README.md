@@ -86,3 +86,62 @@ The true diversity of the world comes from its flora. Consuming a plant has a pe
 - 🌾 **Grass:** Serves as basic food and is simply consumed with no special effect.
 - ✨ **Guarane:** A beneficial plant. The consuming animal gains a permanent **+3 Strength** bonus.
 - ☠️ **Wolfberries:** A poisonous plant. The consuming animal **dies instantly**.
+
+---
+
+### 🧑‍💻 Tech Stack & Design Patterns
+
+This project, while being a first step into Java, intuitively utilizes several key technologies and design patterns that form its architecture.
+
+- **Java & Java Swing**
+  - **Description:** The core of the application is built using standard Java. The graphical user interface (GUI) is rendered using the Java Swing library, which provides components like `JFrame`, `JPanel`, and `JButton` to create the interactive window and grid.
+
+- **Model-View-Controller (MVC) Pattern**
+  - **Description:** The project's structure clearly separates responsibilities, following the MVC pattern.
+    - **Model:** The `World` class and all `Organism` subclasses, which manage the game's state and business logic.
+    - **View:** The `MainWindow` class, which is responsible only for visualizing the model's data (drawing the grid and logs).
+    - **Controller:** The `ActionListener` within `MainWindow`, which handles user input (button clicks) and translates it into actions on the model (e.g., `world.makeRound()`).
+
+- **Factory Pattern**
+  - **Description:** This pattern is used for object creation. It's visible in two key places: the `clone()` method for reproduction, and the static `readFromFile()` method for loading a saved world. In both cases, new organisms (`Wolf`, `Sheep`, etc.) are created without the calling code needing to know the specific subclass.
+
+- **Observer Pattern**
+  - **Description:** A simple version of this pattern is used for logging. Game objects report events to the `World` (`addToMessage`). The `World` then notifies the `MainWindow` at the end of the turn, which updates the `JTextArea`. The game objects don't know about the GUI, they just report status.
+
+- **Strategy Pattern**
+  - **Description:** The `collision()` method is a prime example of this pattern. The default "collision strategy" in the base `Animal` class is to fight or multiply. However, this strategy is overridden in specific `Plant` subclasses (`Guarane`, `Wolfberries`) to produce a completely different outcome (apply a buff or cause death).
+
+---
+
+### 🚀 How to Run
+
+To launch the **Digital World** simulation on your local machine, follow these steps:
+
+1.  **Prerequisites:**
+    - Ensure you have **Java (JDK 8 or newer)** installed.
+
+2.  **Clone the Repository:**
+
+    ```bash
+    git clone git@github.com:X3raFin/Digital_World.git
+    cd Digital_World
+    ```
+
+3.  **Compile and Run:**
+    Compile the source code and run the application from the project root to ensure `start.txt` is loaded correctly.
+    ```bash
+    cd src
+    javac App.java
+    cd ..
+    java -cp src App
+    ```
+
+---
+
+## 📬 Contact
+
+Created by **Kacper Jankowski**.
+
+- 🌐 **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/kacper-jankowski-webdev/)
+- 📧 **Email:** kacper.jankowski.webdev@gmail.com
+- 💼 **Portfolio:** [Portfolio](https://portfolio-neon-one-lb87d8f29l.vercel.app/)
