@@ -10,7 +10,16 @@ A key feature is the ability for the user to save the current state of the world
 
 ### ⚡Digital Dashboard
 
-![Gif pokazujacy walke, miedzy gatunkami.](src/assets/Walka.gif)
+![Gif shows fight and logs work.](src/assets/Walka.gif)
+
+- ⚔️ **Fighting with other species:** The GIF above shows a fight between a wolf and a sheep.
+- 📜 **Logs:** The log at the bottom of the window provides real-time updates on all actions occurring on the board.
+
+![Collision with plants and multiply.](src/assets/RozmnazanieIKolizjaZRoslinami.gif)
+
+- 🐣 **Reproduction:** When an animal collides with another of the same species, they attempt to reproduce.
+- 🌱 **Plant Growth:** Each turn, plants have a chance to spread to a random adjacent tile.
+- 🍽️ **Collision with Plants:** Colliding with a plant triggers a unique effect depending on the plant's type.
 
 ---
 
